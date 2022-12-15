@@ -8,7 +8,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font: inherit;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -18,62 +18,93 @@ img,
 svg,
 picture,
 video {
-	max-width: 100%;
+    width: 100%;
+}
+li>a{
+    padding: 0;
+    text-decoration: none;
+    color: rgb(108, 107, 107);
 }
 
 /*--------------------------------
 --------------top bar-----------*/
 .top-bar{
     width: 100%;
-    height: 3.5rem;
+    min-height: 70px;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+}
+nav{
+    height: 70px;
     display: flex;
     justify-content: space-between;
-    background-color: blueviolet;
+}
+nav>ul>li{
+    display: inline-block;
+    font-size: 15px;
+    line-height: 70px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.logo{
+    vertical-align: middle;
+    margin: 0 10px 2px 5px;
+}
+.button{
+    background-color: rgb(61, 123, 255);
+    text-decoration: none;
+    padding: 8px 10px;
+    color: white;
 }
 
-.menu-sx{
-    width: 20rem;
-    height: 100%;
-    background-color: aqua;
-}
-
-.menu-dx{
-    width: 20rem;
-    height: 100%;
-    background-color: aqua;
-}
 
 /*--------------------------------
 ----------------main------------*/
 
 /*jumbotron*/
 .big-container{
-    background-color: brown;
+    padding-top: 70px;
+    background-color: rgb(170, 234, 255);
 }
 
 .jumbotron{
-    margin: 0 auto;
-    width: 70%;
-    height: 65vh;
+    width: 65%;
+    height: 50vh;
     display: flex;
-    text-align: center;
-    background-color: bisque;
+    margin: 0 auto;
+}
+
+.big-title{
+    width: 65%;
+    margin: 0 auto;
+    font-size: 37px;
+    padding-top: 70px;
 }
 
 .p-jumbo{
     width: 40%;
-    height: 100%;
-    background-color: white;
+    padding-top: 40px;
+}
+.p-description{
+    padding: 30px 0;
+    font-size: 13px;
+    line-height: 18px;
 }
 .img-jumbo{
-    width: 60%;
-    height: 100%;
-    background-color: aqua;
+    width: 85%;
+    padding-top: 70px;
 }
 
 /*primo blocco del main*/
 .small-container{
-    background-color: grey;
+}
+
+.small-title{
+    width: 55%;
+    margin: 0 auto;
+    font-size: 22px;
+    padding-top: 80px;
 }
 
 .column-section{
@@ -81,20 +112,48 @@ video {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    background-color: aqua;
 }
-
-.column{
-    width: 30%;
-    height: 40vh;
-    border: 1px solid black;
-    background-color: blueviolet;
-}
-
-.column-title{
+.column-title-space{
     width: 100%;
     height: 2rem;
-    background-color: black;
+    border-bottom: 1px solid grey;
+    color: rgb(85, 85, 85);
+    text-align: center;
+    background-color: white;
+}
+.column{
+    width: 30%;
+    border: 1px solid grey;
+}
+.column-title-space>span{
+    vertical-align: -webkit-baseline-middle;
+}
+.column-title{
+    margin: 25px 0 10px 20px;
+}
+.column>p,h5,a{
+    padding: 8px 20px;
+    font-size: 12px;
+}
+.column>a{
+    padding: 0;
+}
+.month{
+    color: rgb(85, 85, 85);
+    margin-bottom: 25px;
+}
+.bt-column{
+    width: 100%;
+    margin: 35px 0;
+    text-align: center;
+}
+.bt-column>*{
+    padding: 8px 20px;
+}
+hr{
+    width: 16%;
+    margin: 20px 20px;
+    background-color: rgb(152, 152, 152);
 }
 
 /*secondo blocco del main*/
@@ -102,26 +161,85 @@ video {
     width: 55%;
     height: 25vh;
     margin: 2rem auto;
-    background-color: brown;
+    border: 1px solid black;
+    text-align: initial;
+    position: relative;
+}
+.enterprise-title{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+}
+.enterprise>h3{
+    margin: 18px 0 0 20px;
+}
+.enterprise>p{
+    font-size: 12px;
+    margin: 30px 0 0 20px;
+}
+.enterprise>a{
+    position: absolute;
+    right: 15px;
+    top: 55px;
 }
 
-.main{
-    height: 50vh;
+/*terzo blocco del main*/
+.p-jumbo.main{
+    width: 40% 
 }
+.img-jumbo.main{
+    padding: 0;
+    width: 60%;
+}
+.main>h3,a{
+    margin: 10px 0 10px 30px;
+}
+.main>p{
+    line-height: 18px;
+    font-size: 13px;
+    margin: 10px 0 25px 30px;
+}
+.main>a{
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+}
+
 
 /*quarto blocco del main*/
 .cards{
     flex-wrap: wrap;
-    background-color: green;
 }
 .card{
     width: 30%;
-    height: 50vh;
+    height: 47vh;
     margin: 20px 0;
-    background-color: rgb(158, 158, 10);
+}
+.card>h5{
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.card>p{
+    font-size: 12px;
 }
 
 /*quinto blocco del main*/
+.quinto{
+    height: 18vh;
+}
+.quinto>h2{
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+.quinto>a{
+    position: static;
+    padding: 0;
+    margin: 0;
+}
+/*sesto blocco del main*/
 .bottom{
     display: flex;
     justify-content: center;
